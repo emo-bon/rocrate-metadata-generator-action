@@ -6,7 +6,7 @@ from rocrate.model.contextentity import ContextEntity
 
 GITHUB_WORKSPACE = Path(os.getenv("GITHUB_WORKSPACE", "/github/workspace"))
 ROCRATE_PROFILE_URI = os.getenv("PROFILE")
-REPO = os.getenv("REPO")
+REPO = os.getenv("REPO").split("/")[-1]
 
 crate = ROCrate()
 
@@ -152,8 +152,9 @@ for ls in ("logsheets", "logsheets-filtered", "logsheets-transformed"):
             )
 
 for dirpath, dirnames, filenames in os.walk(GITHUB_WORKSPACE / "rdf"):
+    dirpath = dirpath.replace(str(GITHUB_WORKSPACE), ".")
     for d in dirnames:
-        dest_path = f"./{dirpath}/{d}/"
+        dest_path = f"{dirpath}/{d}/"
         crate.add_directory(
             dest_path=dest_path,
             properties={
@@ -161,11 +162,11 @@ for dirpath, dirnames, filenames in os.walk(GITHUB_WORKSPACE / "rdf"):
             }
         )
     for f in filenames:
-        dest_path = f"./{dirpath}/{f}"
+        dest_path = f"{dirpath}/{f}"
         crate.add_file(
             dest_path=dest_path,
             properties={
-                "@label": f"./{dest_path}",
+                "@label": dest_path,
                 "encodingFormat": "text/turtle",
             }
         )
