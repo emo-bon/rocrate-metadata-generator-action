@@ -172,5 +172,4 @@ for dirpath, dirnames, filenames in os.walk(GITHUB_WORKSPACE / "rdf"):
         )
 
 # write
-with open(GITHUB_WORKSPACE / "ro-crate-metadata.json", "w") as f:
-    json.dump(crate.metadata.generate(), f, indent=4)
+crate.metadata.write(GITHUB_WORKSPACE)
