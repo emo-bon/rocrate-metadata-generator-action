@@ -124,18 +124,15 @@ for ls in ("logsheets", "logsheets-filtered", "logsheets-transformed"):
             envo_term = "ENVO_03000033" if habitat == "sediment" else "ENVO_06105011"
             keywords = {
                 "measured": [
-                    "metadata",
                     "http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement",
                     f"http://purl.obolibrary.org/obo/{envo_term}"
                 ],
                 "observatory": [
-                    "metadata",
                     "https://purl.org/dc/terms/Location",
                     "https://schema.org/ContactPoint",
                     f"http://purl.obolibrary.org/obo/{envo_term}"
                 ],
                 "sampling": [
-                    "metadata",
                     "https://rs.tdwg.org/terms/Event",
                     f"http://purl.obolibrary.org/obo/{envo_term}"
                 ],
