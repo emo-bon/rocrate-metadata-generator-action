@@ -18,7 +18,6 @@ profile = crate.add(
         properties={
             "@type": "CreativeWork",
             "name": "<name>", # TODO
-            "version": "<version>" # TODO
         }
     )
 )
@@ -45,13 +44,11 @@ crate.update_jsonld({
         "https://schema.org/Dataset",
         "EMO BON",
     ],
-    "version": "<version>", # TODO
     "accessURL": f"https://raw.githubusercontent.com/emo-bon/{REPO}/main/ro-crate-metadata.json", # TODO point to github?
 })
 
 crate.update_jsonld({
     "@id": "ro-crate-metadata.json",
-    "version": "<version>", # TODO
 })
 
 files = {
