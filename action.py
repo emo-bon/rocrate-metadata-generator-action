@@ -99,8 +99,8 @@ for ls in ("logsheets", "logsheets/filtered", "logsheets/transformed"):
             dest_path = f"{ls}/{habitat}_{sheet}.csv"
             desc_pt1 = {
                 "logsheets": "Raw",
-                "logsheets-filtered": "Filtered",
-                "logsheets-transformed": "Transformed",
+                "logsheets/filtered": "Filtered",
+                "logsheets/transformed": "Transformed",
             }
             desc_pt2 = {
                 "measured": "environmental measurements",
