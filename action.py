@@ -32,10 +32,10 @@ crate.update_jsonld({
     "@id": "./",
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "title": REPO,
-    "publisher": "https://www.embrc.eu/emo-bon", # TODO data.emobon.embrc.eu?
+    "publisher": "https://www.embrc.eu/emo-bon", 
     "contactPoint": {
-        "@id": "dummyID",
-        "@type": "ContactPoint", # TODO changed this to type
+        "@id": "https://ror.org/0038zss60",
+        "@type": "ContactPoint", 
         "email": "emobon@embrc.eu"
     },
     "description": f"This RO-Crate/GitHub repository contains the EMO BON sampling event logsheets from the observatory {REPO.split('-')[1].upper()}",
@@ -53,17 +53,8 @@ crate.update_jsonld({
 })
 
 files = {
-    "./.gitignore": {
-        "encodingFormat": "text/plain", # TODO changed fileFormat to encodingFormat
-    },
     "./README.md": {
         "encodingFormat": "text/markdown",
-    },
-    "./.github/workflows/workflow.yml": {
-        "encodingFormat": "application/x-yaml",
-    },
-    "./config/workflow_properties.yml": {
-        "encodingFormat": "application/x-yaml",
     },
     "./data-quality-control/dqc.csv": {
         "encodingFormat": "text/csv",
@@ -73,7 +64,7 @@ files = {
     },
     "./data-quality-control/report.csv": {
         "encodingFormat": "text/csv",
-    },
+    }
 }
 
 for dest_path, properties in files.items():
@@ -84,8 +75,6 @@ for dest_path, properties in files.items():
     )
 
 directories = [
-    "./.github/",
-    "./config/",
     "./data-quality-control/",
 ]
 
