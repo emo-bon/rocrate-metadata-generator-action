@@ -34,6 +34,7 @@ crate.update_jsonld({
     "title": REPO,
     "publisher": "https://www.embrc.eu/emo-bon", # TODO data.emobon.embrc.eu?
     "contactPoint": {
+        "@id": "dummyID",
         "@type": "ContactPoint", # TODO changed this to type
         "email": "emobon@embrc.eu"
     },
