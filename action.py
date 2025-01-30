@@ -86,7 +86,7 @@ for directory in directories:
         }
     )
 
-for ls in ("logsheets", "logsheets-filtered", "logsheets-transformed"):
+for ls in ("logsheets", "logsheets/filtered", "logsheets/transformed"):
     dest_path = f"./{ls}/"
     crate.add_directory(
         dest_path=dest_path,
