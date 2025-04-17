@@ -64,6 +64,9 @@ files = {
     },
     "./data-quality-control/report.csv": {
         "encodingFormat": "text/csv",
+    },
+    "./all-triples.ttl":{
+        "encodingFormat":"text/turtle",
     }
 }
 
