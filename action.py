@@ -23,7 +23,7 @@ profile = crate.add(
 )
 
 # context
-crate.metadata.extra_terms.update({"accessURL": "https://www.w3.org/ns/dcat#accessURL"}) # TODO http vs https
+crate.metadata.extra_terms.update({"accessURL": "http://www.w3.org/ns/dcat#accessURL"}) # TODO http vs https
 
 # graph
 crate.root_dataset["conformsTo"] = profile
